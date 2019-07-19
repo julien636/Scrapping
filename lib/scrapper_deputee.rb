@@ -26,22 +26,6 @@ end
 
 
 
-# def get_deputee_name
-#     page = Nokogiri::HTML(open("https://www.nosdeputes.fr/florent-boudie"))
-#     print page.xpath('/html[1]/body[1]/div[1]/div[5]/div[1]/div[1]/div[1]/h1[1]').text
-        
-# end
-
-# get_deputee_name.class
-
-# def get_townhall_email(townhall_url)
-#     page = Nokogiri::HTML(open(townhall_url))
-#     hash = {"#{page.xpath("/html[1]/body[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[1]/h1[1]").text}" => page.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/table[1]/tbody[1]/tr[4]/td[2]").text}
-#     return hash
-#  end
-
-
-
 def get_all_email
     arr=[]   
     deputee_url.map{|link| arr << 
@@ -50,6 +34,7 @@ def get_all_email
     }
     puts arr
 end
+
 get_all_email
 
 
